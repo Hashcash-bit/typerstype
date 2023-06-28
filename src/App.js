@@ -1,26 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-// Important React
-import React from 'react';
+// Important React Dependendcies
+import React from "react";
+// Importing the router
+import {
+  BrowserRouter as Router,
+  Routes,
+  Redirect,
+  Route,
+} from "react-router-dom";
 
+// Import the Styling
+import "./App.css";
+
+// Importing the components
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" Component={Hello} exact />
+        </Routes>
+      </Router>
     </div>
   );
 }
