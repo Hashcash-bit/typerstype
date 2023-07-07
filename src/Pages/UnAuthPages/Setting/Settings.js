@@ -5,11 +5,6 @@ const Settings = () => {
   return (
     <div>
       Setting
-      <button>
-        <Link to="/Store">Store</Link>
-        <Link to="/Leaderboard">Leaderboard</Link>
-        <Link to="/">Type</Link>
-      </button>
     </div>
   )
 }

@@ -20,14 +20,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Router>
         <Routes>
           <Route path="/" Component={Home} exact />
           <Route path="/Store" Component={Store} exact />
           <Route path="/Leaderboard" Component={Leaderboard} exact />
           <Route path="/Settings" Component={Settings} exact />
         </Routes>
-      </Router>
     </div>
   );
 }

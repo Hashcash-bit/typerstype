@@ -11,16 +11,7 @@ import Navbar from "../NavBar/Navbar";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  return (
-    <div>
-      Type
-      <button>
-        <Link to="/Store">Store</Link>
-        <Link to="/Leaderboard">Leaderboard</Link>
-        <Link to="/Settings">Settings</Link>
-      </button>
-    </div>
-  );
+  return <div style={{ color: "blue" }}>Type</div>;
 };
 
 export default Home;

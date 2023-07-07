@@ -5,11 +5,6 @@ const Store = () => {
   return (
     <div>
       Store
-      <button>
-        <Link to="/">Home</Link>
-        <Link to="/Leaderboard">Leaderboard</Link>
-        <Link to="/Settings">Settings</Link>
-      </button>
     </div>
   )
 }
