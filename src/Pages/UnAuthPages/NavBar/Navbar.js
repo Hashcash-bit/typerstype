@@ -33,8 +33,8 @@ const Navbar = () => {
         <LinkText isSelected={isSelected === 'Option 4'} onClick={() => handleClick('Option 4')} to="/Settings">Settings</LinkText>
       </NavLinks>
       <LoginContainer>
-        <LoginButton>LogIn</LoginButton>
-        <SignUpButton>SignUp</SignUpButton>
+        <LoginButton to="/LogIn">LogIn</LoginButton>
+        <SignUpButton to="/SignUp">SignUp</SignUpButton>
       </LoginContainer>
     </NavbarContainer>
   );
