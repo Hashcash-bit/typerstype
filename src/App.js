@@ -20,7 +20,6 @@ import Home from "./Pages/UnAuthPages/Type/Home";
 import Store from "./Pages/UnAuthPages/Store/Store";
 import Leaderboard from "./Pages/UnAuthPages/Leaderboard/Leaderboard";
 import Settings from "./Pages/UnAuthPages/Setting/Settings";
-import { LoginButton } from "./Pages/UnAuthPages/NavBar/NavbarStyles";
 import Login from "./Pages/UnAuthPages/Login/Login";
 import Signup from "./Pages/UnAuthPages/Signup/Signup";
 
