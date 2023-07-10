@@ -5,7 +5,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 //Importing the Icon
-import { BiX } from "react-icons/bi";
+// This is the X icon
+import { BiX, BiSolidStore } from "react-icons/bi";
+// This is the keyboard icon
+import { BsKeyboard } from "react-icons/bs";
+// This is the Leaderboard icon
+import { MdLeaderboard } from "react-icons/md";
+// This is the settings icon
+import { AiFillSetting } from "react-icons/ai";
 
 export const NavbarContainer = styled.div`
   width: 100%;
@@ -16,9 +23,8 @@ export const NavbarContainer = styled.div`
   padding-top: 5px;
   gap: 40px;
   @media screen and (max-width: 800px) {
-    background-color: pink;
     justify-content: space-between;
-    gap: 0px;
+    gap: 30px;
   }
 `;
 
@@ -35,8 +41,9 @@ export const NavLinks = styled.div`
   display: flex;
   width: 70%;
   gap: 20px;
-  background-color: yellow;
-  @media screen and (max-width: 800px) {
+  transition: ease-in-out 0.3s;
+
+  @media screen and (max-width: 580px) {
     display: none;
   }
 `;
@@ -51,6 +58,7 @@ export const LinkText = styled(Link)`
   height: 60%;
   align-items: center;
   display: flex;
+  gap: 8px;
   border-bottom: ${({ isSelected }) =>
     isSelected ? "1px solid #00ccff" : "1px solid transparent"};
 
@@ -59,10 +67,14 @@ export const LinkText = styled(Link)`
     transform: translateY(-3px);
     border-bottom-color: #00ccff;
   }
+  transition: ease-in-out 0.3s;
+
+  @media screen and (max-width: 966px) {
+    display: none;
+  }
 `;
 
 export const LoginContainer = styled.div`
-  // background-color: yellow;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -71,7 +83,7 @@ export const LoginContainer = styled.div`
   gap: 10px;
   width: 250px;
   margin-right: 25px;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 580px) {
     display: none;
   }
 `;
@@ -110,31 +122,37 @@ export const SignUpButton = styled(Link)`
 
 export const MenuToggle = styled.div`
   display: none;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 580px) {
     font-size: 30px;
-    background-color: yellow;
     height: 70%;
     align-items: center;
     display: flex;
     margin-right: 25px;
+    color: #00ffff;
   }
 `;
 
 export const HiddenContainer = styled.div`
   display: none;
-  @media screen and (max-width: 800px) {
-    background-color: black;
+  @media screen and (max-width: 580px) {
     display: flex;
     flex-direction: column;
-    height: max-content;
-    justify-content: space-between;
-    z-index: 99;
+    height: 100vh;
+    justify-content: start;
+    position: fixed; /* Position the hidden menu */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 999; /* Set a higher z-index to place the hidden menu above other content */
   }
 `;
 
 export const TopSection = styled.div`
   display: flex;
   justify-content: end;
+  height: 109px;
+  align-items: center;
 `;
 
 export const CloseIcon = styled(BiX)`
@@ -155,6 +173,7 @@ export const HiddenLinksContainer = styled.div`
   justify-content: space-around;
   height: 250px;
   padding-bottom: 25px;
+  align-items: center;
 `;
 
 export const HiddenLinks = styled(Link)`
@@ -163,9 +182,147 @@ export const HiddenLinks = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   transition: ease-in-out 0.15s;
+  width: min-content;
   &:hover {
     filter: drop-shadow(0 0 0.2px rgba(255, 255, 255, 0.7));
     transform: translateY(-3px);
+  }
+`;
+
+export const Home = styled(BsKeyboard)`
+  color: #0cf;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 60px;
+  align-items: center;
+  display: flex;
+`;
+
+export const Store = styled(BiSolidStore)`
+  color: #0cf;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  height: 60px;
+  align-items: center;
+  display: flex;
+`;
+
+export const Leaderboard = styled(MdLeaderboard)`
+  color: #0cf;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 60px;
+  align-items: center;
+  display: flex;
+`;
+
+export const Settings = styled(AiFillSetting)`
+  color: #0cf;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  height: 60px;
+  align-items: center;
+  display: flex;
+`;
+
+export const HiddenHome = styled(BsKeyboard)`
+  display: none;
+  transition: ease-in-out 0.3s;
+
+  @media screen and (max-width: 966px) {
+    color: #0cf;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    border-bottom: ${({ isSelected }) =>
+      isSelected ? "1px solid #00ccff" : "1px solid transparent"};
+
+    &:hover {
+      filter: drop-shadow(0 0 0.2px rgba(255, 255, 255, 0.7));
+      transform: translateY(-3px);
+      border-bottom-color: #00ccff;
+    }
+  }
+`;
+
+export const HiddenStore = styled(BiSolidStore)`
+  display: none;
+  transition: ease-in-out 0.3s;
+
+  @media screen and (max-width: 966px) {
+    color: #0cf;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    border-bottom: ${({ isSelected }) =>
+      isSelected ? "1px solid #00ccff" : "1px solid transparent"};
+
+    &:hover {
+      filter: drop-shadow(0 0 0.2px rgba(255, 255, 255, 0.7));
+      transform: translateY(-3px);
+      border-bottom-color: #00ccff;
+    }
+  }
+`;
+
+export const HiddenLeaderboard = styled(MdLeaderboard)`
+  display: none;
+  transition: ease-in-out 0.3s;
+
+  @media screen and (max-width: 966px) {
+    color: #0cf;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    border-bottom: ${({ isSelected }) =>
+      isSelected ? "1px solid #00ccff" : "1px solid transparent"};
+
+    &:hover {
+      filter: drop-shadow(0 0 0.2px rgba(255, 255, 255, 0.7));
+      transform: translateY(-3px);
+      border-bottom-color: #00ccff;
+    }
+  }
+`;
+
+export const HiddenSettings = styled(AiFillSetting)`
+  display: none;
+  transition: ease-in-out 0.3s;
+  @media screen and (max-width: 966px) {
+    color: #0cf;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    border-bottom: ${({ isSelected }) =>
+      isSelected ? "1px solid #00ccff" : "1px solid transparent"};
+
+    &:hover {
+      filter: drop-shadow(0 0 0.2px rgba(255, 255, 255, 0.7));
+      transform: translateY(-3px);
+      border-bottom-color: #00ccff;
+    }
   }
 `;
 
@@ -177,6 +334,7 @@ export const HiddenButtonContainer = styled.div`
   height: 150px;
   gap: 20px;
   border-top: 1px solid #00ffff;
+  // background-color: pink;
 `;
 
 export const HiddenLoginButton = styled(Link)`
