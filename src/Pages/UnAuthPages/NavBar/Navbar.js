@@ -33,7 +33,7 @@ import {
 import Logo from "../../Img/Logo.svg";
 
 // Importing The Icons
-import { BiMenu, BiX } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 
 // Importing Link
 import { Link } from "react-router-dom";

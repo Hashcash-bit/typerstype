@@ -16,7 +16,7 @@ import "./App.css";
 import Navbar from "./Pages/UnAuthPages/NavBar/Navbar";
 
 // Importing the components
-import Home from "./Pages/UnAuthPages/Type/Home";
+import TypingTest from "./Pages/UnAuthPages/Type/TypingTest";
 import Store from "./Pages/UnAuthPages/Store/Store";
 import Leaderboard from "./Pages/UnAuthPages/Leaderboard/Leaderboard";
 import Settings from "./Pages/UnAuthPages/Setting/Settings";
@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       {!isAuthPage && <Navbar />}
       <Routes>
-        <Route path="/" Component={Home} exact />
+        <Route path="/" Component={TypingTest} exact />
         <Route path="/Store" Component={Store} exact />
         <Route path="/Leaderboard" Component={Leaderboard} exact />
         <Route path="/Settings" Component={Settings} exact />
