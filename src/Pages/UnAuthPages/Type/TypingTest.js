@@ -1,4 +1,4 @@
-//Importatn react dependencies
+//Important react dependencies
 import React, { useEffect, useState, useRef } from "react";
 
 //Importing the styled components
