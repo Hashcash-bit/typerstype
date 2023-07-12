@@ -2,8 +2,14 @@
 import React, { useEffect, useState, useRef } from "react";
 
 //Importing the styled components
-import { TyperPage, TopSection, Points } from "./TypingTestStyles";
+import { TyperPage, TopSection, Points, MiddleSection, Paragraph } from "./TypingTestStyles";
+
+// Importing the Timer
 import Timer from "./Utils/Timer";
+import ParagraphType from "./Utils/Paragraph/ParagraphType";
+
+//Importing the paragraph component
+
 
 const TypingTest = () => {
   return (
@@ -13,6 +19,11 @@ const TypingTest = () => {
           <Timer />
           <Points />
         </TopSection>
+        <MiddleSection>
+          <Paragraph>
+            <ParagraphType />
+          </Paragraph>
+        </MiddleSection>
       </TyperPage>
     </>
   );

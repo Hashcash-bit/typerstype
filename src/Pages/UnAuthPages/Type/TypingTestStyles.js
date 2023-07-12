@@ -12,3 +12,11 @@ export const TopSection = styled.div`
 export const Points = styled.div`
 
 `
+
+export const MiddleSection = styled.div`
+
+`
+
+export const Paragraph = styled.div`
+
+`
